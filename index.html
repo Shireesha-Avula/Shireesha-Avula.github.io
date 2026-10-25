@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | CSE Student</title>
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7ff;
+      color: #202943;
+      line-height: 1.6;
+    }
+    nav {
+      background: #14213d;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav strong { color: #fff; font-size: 20px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px;
+      font-size: 14px;
+    }
+    header {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #14213d, #4459a6);
+      color: white;
+    }
+    header h1 { font-size: 38px; margin-bottom: 8px; }
+    header p { color: #e1e7ff; }
+    .btn {
+      display: inline-block;
+      background: #ffca70;
+      color: #17213a;
+      padding: 11px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 5px;
+      border: none;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 38px 20px;
+    }
+    h2 { color: #3449a0; }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      box-shadow: 0 3px 14px #14213d10;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills span {
+      background: #e4eaff;
+      color: #273c8d;
+      padding: 8px 13px;
+      border-radius: 20px;
+    }
+    a { overflow-wrap: anywhere; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #14213d;
+      color: white;
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 29px; }
+      nav { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <strong>My Portfolio</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Hello, I'm Your Name</h1>
+    <p>CSE Student | Aspiring Software Developer</p>
+    <p>Learning, building and creating with technology.</p>
+    <a class="btn" href="#projects">View My Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Computer Science Engineering student interested
+        in web development and software development.
+        I enjoy learning programming languages and building
+        practical applications. I am looking for internship
+        opportunities where I can improve my skills and gain
+        real-world experience.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Java</span>
+      <span>PHP</span>
+      <span>SQL</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card">
+      <h3>College Payment Management System</h3>
+      <p>
+        A web application designed to manage student information
+        and payment records. It includes features for adding
+        students and recording payments.
+      </p>
+      <p><strong>Technologies:</strong> PHP, SQL, HTML, CSS</p>
+      <a class="btn" href="https://github.com/" target="_blank"
+         rel="noopener noreferrer">My GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>More Projects</h3>
+      <p>
+        I am continuing to learn programming and develop
+        new projects. More work will be added here.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>Computer Science Engineering (CSE)</h3>
+      <p>College: Add Your College Name</p>
+      <p>Graduation year: Add Your Expected Graduation Year</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Email: <span id="email">your-email@example.com</span></p>
+      <a class="btn" id="emailButton"
+         href="mailto:your-email@example.com">Email Me</a>
+      <a class="btn" href="https://github.com/"
+         target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name | Personal Portfolio</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
